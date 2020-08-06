@@ -3,11 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseStrings", "ReverseStrings\ReverseStrings.csproj", "{E5358B59-1B50-42EF-B79E-F82F68A32F67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseStrings", "ReverseStrings\ReverseStrings.csproj", "{E5358B59-1B50-42EF-B79E-F82F68A32F67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackSum", "StackSum\StackSum.csproj", "{FCC290D8-8F16-4246-8DCD-4C51C0ADFCE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackSum", "StackSum\StackSum.csproj", "{FCC290D8-8F16-4246-8DCD-4C51C0ADFCE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{D12D4646-437F-4B5C-BC7A-2AE8F1839416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{D12D4646-437F-4B5C-BC7A-2AE8F1839416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04.MatchingBrackets", "P04.MatchingBrackets\P04.MatchingBrackets.csproj", "{63D4B97A-9E81-47E9-BE4F-6ECACBBE0BCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05.PrintEvenNumbers", "P05.PrintEvenNumbers\P05.PrintEvenNumbers.csproj", "{326138A4-2166-4C7A-BAC0-BB4C70ECB6E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06.Supermarket", "P06.Supermarket\P06.Supermarket.csproj", "{C159E8A3-1852-4AFC-AD63-3121A362FE23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07.HotPotato", "P07.HotPotato\P07.HotPotato.csproj", "{D3F7EC28-08BC-403B-9734-62B8BC6BD504}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08.TrafficJam", "P08.TrafficJam\P08.TrafficJam.csproj", "{AE7483F4-13FB-4444-8403-57283ACD7BC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +37,26 @@ Global
 		{D12D4646-437F-4B5C-BC7A-2AE8F1839416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D12D4646-437F-4B5C-BC7A-2AE8F1839416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D12D4646-437F-4B5C-BC7A-2AE8F1839416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D4B97A-9E81-47E9-BE4F-6ECACBBE0BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D4B97A-9E81-47E9-BE4F-6ECACBBE0BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D4B97A-9E81-47E9-BE4F-6ECACBBE0BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D4B97A-9E81-47E9-BE4F-6ECACBBE0BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{326138A4-2166-4C7A-BAC0-BB4C70ECB6E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{326138A4-2166-4C7A-BAC0-BB4C70ECB6E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{326138A4-2166-4C7A-BAC0-BB4C70ECB6E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{326138A4-2166-4C7A-BAC0-BB4C70ECB6E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C159E8A3-1852-4AFC-AD63-3121A362FE23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C159E8A3-1852-4AFC-AD63-3121A362FE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C159E8A3-1852-4AFC-AD63-3121A362FE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C159E8A3-1852-4AFC-AD63-3121A362FE23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F7EC28-08BC-403B-9734-62B8BC6BD504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F7EC28-08BC-403B-9734-62B8BC6BD504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F7EC28-08BC-403B-9734-62B8BC6BD504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F7EC28-08BC-403B-9734-62B8BC6BD504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7483F4-13FB-4444-8403-57283ACD7BC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7483F4-13FB-4444-8403-57283ACD7BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7483F4-13FB-4444-8403-57283ACD7BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7483F4-13FB-4444-8403-57283ACD7BC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

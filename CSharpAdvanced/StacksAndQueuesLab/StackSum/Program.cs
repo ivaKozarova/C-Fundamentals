@@ -35,13 +35,7 @@ namespace StackSum
                         break;
                 }
             }
-            //while(stackOfInt.Count >1)
-            //{
-            //    int firstNum = stackOfInt.Pop();
-            //    int secondNum = stackOfInt.Pop();
-            //    int result = firstNum + secondNum;
-            //    stackOfInt.Push(result);
-            //}
+            
             Console.WriteLine($"Sum: {stackOfInt.Sum()}");
 
         }
