@@ -39,10 +39,6 @@ namespace P07.TruckTour
             string[] infoForStartPump = circle.Peek().Split().ToArray();
             int index = int.Parse(infoForStartPump[2]);
             Console.WriteLine(index);
-
-
-
-
         }
 
         private static void FillQueue(int numberOfPumps, Queue<string> circle)
