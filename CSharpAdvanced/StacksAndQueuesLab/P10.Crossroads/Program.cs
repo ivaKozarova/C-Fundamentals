@@ -29,7 +29,7 @@ namespace P10.Crossroads
                         {
                             string currentcar = cars.Peek();
 
-                            if (currentcar.Length <= currenGeeenLight)
+                            if (currentcar.Length < currenGeeenLight)
                             {
                                 currenGeeenLight -= currentcar.Length;
                                 cars.Dequeue();
@@ -70,7 +70,7 @@ namespace P10.Crossroads
            if(!crash)
             {
                 Console.WriteLine("Everyone is safe.");
-                Console.WriteLine($"{countPassedCars} total cars passed the crossroads");
+                Console.WriteLine($"{countPassedCars} total cars passed the crossroads.");
             }
         }
     }
