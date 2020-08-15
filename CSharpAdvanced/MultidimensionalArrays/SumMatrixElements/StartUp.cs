@@ -35,6 +35,7 @@ namespace SumMatrixElements
             Console.WriteLine(matrix.GetLength(1));
 
             //var sum = matrix.Cast<int>().Sum();
+            
             var sum = 0;
             foreach (int  element in matrix)
             {

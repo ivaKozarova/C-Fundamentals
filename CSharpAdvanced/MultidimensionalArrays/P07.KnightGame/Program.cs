@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
+
 
 namespace P07.KnightGame
 {
@@ -22,16 +22,15 @@ namespace P07.KnightGame
                 int maxDangerousKnight = 0;
                 int currentRowOfKnight = -1;
                 int currentColOfKnights = -1;
-                
 
                 for (int row = 0; row < n; row++)
                 {
                     for (int col = 0; col < n; col++)
                     {
-                       
+
                         if (matrix[row, col] == 'K')
                         {
-                           int currentDangerousKnight = FindDangerousCount(n, matrix,  row, col);
+                            int currentDangerousKnight = FindDangerousCount(n, matrix, row, col);
                             if (currentDangerousKnight > maxDangerousKnight)
                             {
                                 maxDangerousKnight = currentDangerousKnight;
@@ -41,6 +40,7 @@ namespace P07.KnightGame
                         }
                     }
                 }
+
                 if (maxDangerousKnight == 0)
                 {
                     break;
@@ -55,6 +55,7 @@ namespace P07.KnightGame
             Console.WriteLine(knightsToRemove);
         }
 
+       
         private static int FindDangerousCount(int n, char[,] matrix, int row, int col)
         {
             int currentDangerousKnight = 0;
