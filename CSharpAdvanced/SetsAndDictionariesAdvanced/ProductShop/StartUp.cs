@@ -44,10 +44,10 @@ namespace ProductShop
             {
                 shops[shop] = new Dictionary<string, double>();
             }
-            //if (!shops[shop].ContainsKey(product))
-            //{
-            //    shops[shop][product] = 0;
-            //}
+            if (!shops[shop].ContainsKey(product))
+            {
+                shops[shop][product] = 0;
+            }
             shops[shop][product] = price;
         }
     }
