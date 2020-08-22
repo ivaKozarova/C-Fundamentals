@@ -89,13 +89,13 @@ namespace RadioactiveMutantVampireBunnies
 
         }
 
-        private static bool MovePlayerRight(char[][] lier, int[] playerPosition, bool isDead, char empty, char player)
+        private static bool MovePlayerRight(char[][] lair, int[] playerPosition, bool isDead, char empty, char player)
         {
-            lier[playerPosition[0]][playerPosition[1]] = empty;
+            lair[playerPosition[0]][playerPosition[1]] = empty;
             playerPosition[1] = playerPosition[1] + 1;
-            if (lier[playerPosition[0]][playerPosition[1]] == empty)
+            if (lair[playerPosition[0]][playerPosition[1]] == empty)
             {
-                lier[playerPosition[0]][playerPosition[1]] = player;
+                lair[playerPosition[0]][playerPosition[1]] = player;
             }
             else
             {
@@ -105,13 +105,13 @@ namespace RadioactiveMutantVampireBunnies
             return isDead;
         }
 
-        private static bool MovePlayerLeft(char[][] lier, int[] playerPosition, bool isDead, char empty, char player)
+        private static bool MovePlayerLeft(char[][] lair, int[] playerPosition, bool isDead, char empty, char player)
         {
-            lier[playerPosition[0]][playerPosition[1]] = empty;
+            lair[playerPosition[0]][playerPosition[1]] = empty;
             playerPosition[1] = playerPosition[1] - 1;
-            if (lier[playerPosition[0]][playerPosition[1]] == empty)
+            if (lair[playerPosition[0]][playerPosition[1]] == empty)
             {
-                lier[playerPosition[0]][playerPosition[1]] = player;
+                lair[playerPosition[0]][playerPosition[1]] = player;
             }
             else
             {
@@ -121,13 +121,13 @@ namespace RadioactiveMutantVampireBunnies
             return isDead;
         }
 
-        private static bool MovePlayerDown(char[][] lier, int[] playerPosition, bool isDead, char empty, char player)
+        private static bool MovePlayerDown(char[][] lair, int[] playerPosition, bool isDead, char empty, char player)
         {
-            lier[playerPosition[0]][playerPosition[1]] = empty;
+            lair[playerPosition[0]][playerPosition[1]] = empty;
             playerPosition[0] = playerPosition[0] + 1;
-            if (lier[playerPosition[0]][playerPosition[1]] == empty)
+            if (lair[playerPosition[0]][playerPosition[1]] == empty)
             {
-                lier[playerPosition[0]][playerPosition[1]] = player;
+                lair[playerPosition[0]][playerPosition[1]] = player;
             }
             else
             {
@@ -137,21 +137,21 @@ namespace RadioactiveMutantVampireBunnies
             return isDead;
         }
 
-        private static bool PlayerOut(char[][] lier, int[] playerPosition, char empty)
+        private static bool PlayerOut(char[][] lair, int[] playerPosition, char empty)
         {
             bool isOut = true;
-            lier[playerPosition[0]][playerPosition[1]] = empty;
+            lair[playerPosition[0]][playerPosition[1]] = empty;
             return isOut;
         }
 
-        private static bool MovePlayerUp(char[][] lier, int[] playerPosition, bool isDead, char empty, char player)
+        private static bool MovePlayerUp(char[][] lair, int[] playerPosition, bool isDead, char empty, char player)
         {
-            lier[playerPosition[0]][playerPosition[1]] = empty;
+            lair[playerPosition[0]][playerPosition[1]] = empty;
             playerPosition[0] = playerPosition[0] - 1;
 
-            if (lier[playerPosition[0]][playerPosition[1]] == empty)
+            if (lair[playerPosition[0]][playerPosition[1]] == empty)
             {
-                lier[playerPosition[0]][playerPosition[1]] = player;
+                lair[playerPosition[0]][playerPosition[1]] = player;
             }
             else
             {
@@ -161,11 +161,11 @@ namespace RadioactiveMutantVampireBunnies
             return isDead;
         }
 
-        private static void PrintEndStatment(int rows, char[][] lier, int[] playerPosition, bool isDead, bool isOut)
+        private static void PrintEndStatment(int rows, char[][] lair, int[] playerPosition, bool isDead, bool isOut)
         {
             for (int row = 0; row < rows; row++)
             {
-                Console.WriteLine(lier[row]);
+                Console.WriteLine(lair[row]);
             }
             if (isDead == true)
             {
@@ -177,7 +177,7 @@ namespace RadioactiveMutantVampireBunnies
             }
         }
 
-        private static bool BunniesSpread(int rows, int cols, char[][] lier, char player, char bunny, bool isDead)
+        private static bool BunniesSpread(int rows, int cols, char[][] lair, char player, char bunny, bool isDead)
         {
             var bunniesPositions = new List<int[]>();
 
@@ -186,7 +186,7 @@ namespace RadioactiveMutantVampireBunnies
             {
                 for (int currCol = 0; currCol < cols; currCol++)
                 {
-                    if(lier[currRow][currCol] == bunny)
+                    if(lair[currRow][currCol] == bunny)
                     {
                         var coord = new int[2];
                         coord[0] = currRow;
@@ -205,36 +205,36 @@ namespace RadioactiveMutantVampireBunnies
                     
                         if (row - 1 >= 0)
                         {
-                            if (lier[row - 1][col] == player)
+                            if (lair[row - 1][col] == player)
                             {
                                 isDead = true;
                             }
-                            lier[row - 1][col] = bunny;
+                        lair[row - 1][col] = bunny;
                         }
                         if (col - 1 >= 0)
                         {
-                            if (lier[row][col - 1] == player)
+                            if (lair[row][col - 1] == player)
                             {
                                 isDead = true;
                             }
-                            lier[row][col - 1] = bunny;
+                        lair[row][col - 1] = bunny;
                         }
                         if (col + 1 < cols)
                         {
-                            if (lier[row][col + 1] == player)
+                            if (lair[row][col + 1] == player)
                             {
                                 isDead = true;
                             }
-                            lier[row][col + 1] = bunny;
+                        lair[row][col + 1] = bunny;
                         }
 
                         if (row + 1 < rows)
                         {
-                            if (lier[row + 1][col] == player)
+                            if (lair[row + 1][col] == player)
                             {
                                 isDead = true;
                             }
-                            lier[row + 1][col] = bunny;
+                        lair[row + 1][col] = bunny;
                         }
                     
                 }
@@ -243,7 +243,7 @@ namespace RadioactiveMutantVampireBunnies
             return isDead;
         }
 
-        private static void FillLier(int rows, int cols, char[][] lier, int[] playerPosition)
+        private static void FillLier(int rows, int cols, char[][] lair, int[] playerPosition)
         {
             for (int row = 0; row < rows; row++)
             {
@@ -265,8 +265,8 @@ namespace RadioactiveMutantVampireBunnies
                 }
                 for (int col = 0; col < cols; col++)
                 {
-                    lier[row] = new char[cols];
-                    lier[row] = input;
+                    lair[row] = new char[cols];
+                    lair[row] = input;
                 }
             }
         }
