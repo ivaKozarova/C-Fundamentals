@@ -12,10 +12,10 @@ namespace RadioactiveMutantVampireBunnies
             var rows = dimentions[0];
             var cols = dimentions[1];
 
-            var lier = new char[rows][];
+            var lair = new char[rows][];
             int[] playerPosition = new int[2];
 
-            FillLier(rows, cols, lier, playerPosition);
+            FillLier(rows, cols, lair, playerPosition);
 
             bool isDead = false;
             bool isOut = false;
@@ -33,49 +33,49 @@ namespace RadioactiveMutantVampireBunnies
                     case 'U':
                         if (playerPosition[0] > 0)
                         {
-                            isDead = MovePlayerUp(lier, playerPosition, isDead, empty, player);
+                            isDead = MovePlayerUp(lair, playerPosition, isDead, empty, player);
                         }
                         else
                         {
-                            isOut = PlayerOut(lier, playerPosition, empty);
+                            isOut = PlayerOut(lair, playerPosition, empty);
                         }
-                        isDead = BunniesSpread(rows, cols, lier, player, bunny, isDead);
+                        isDead = BunniesSpread(rows, cols, lair, player, bunny, isDead);
                         break;
 
                     case 'D':
                         if (playerPosition[0] < rows - 1)
                         {
-                            isDead = MovePlayerDown(lier, playerPosition, isDead, empty, player);
+                            isDead = MovePlayerDown(lair, playerPosition, isDead, empty, player);
                         }
                         else
                         {
-                            isOut = PlayerOut(lier, playerPosition, empty);
+                            isOut = PlayerOut(lair, playerPosition, empty);
                         }
-                        isDead = BunniesSpread(rows, cols, lier, player, bunny, isDead);
+                        isDead = BunniesSpread(rows, cols, lair, player, bunny, isDead);
                         break;
 
                     case 'L':
                         if (playerPosition[1] > 0)
                         {
-                            isDead = MovePlayerLeft(lier, playerPosition, isDead, empty, player);
+                            isDead = MovePlayerLeft(lair, playerPosition, isDead, empty, player);
                         }
                         else
                         {
-                            isOut = PlayerOut(lier, playerPosition, empty);
+                            isOut = PlayerOut(lair, playerPosition, empty);
                         }
-                        isDead = BunniesSpread(rows, cols, lier, player, bunny, isDead);
+                        isDead = BunniesSpread(rows, cols, lair, player, bunny, isDead);
                         break;
 
                     case 'R':
                         if (playerPosition[1] < cols - 1)
                         {
-                            isDead = MovePlayerRight(lier, playerPosition, isDead, empty, player);
+                            isDead = MovePlayerRight(lair, playerPosition, isDead, empty, player);
                         }
                         else
                         {
-                            isOut = PlayerOut(lier, playerPosition, empty);
+                            isOut = PlayerOut(lair, playerPosition, empty);
                         }
-                        isDead = BunniesSpread(rows, cols, lier, player, bunny, isDead);
+                        isDead = BunniesSpread(rows, cols, lair, player, bunny, isDead);
                         break;
                 }
 
@@ -85,7 +85,7 @@ namespace RadioactiveMutantVampireBunnies
                 }
             }
 
-            PrintEndStatment(rows, lier, playerPosition, isDead, isOut);
+            PrintEndStatment(rows, lair, playerPosition, isDead, isOut);
 
         }
 
