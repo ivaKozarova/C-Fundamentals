@@ -1,0 +1,274 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace RadioactiveMutantVampireBunnies
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var dimentions = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            var rows = dimentions[0];
+            var cols = dimentions[1];
+
+            var lier = new char[rows][];
+            int[] playerPosition = new int[2];
+
+            FillLier(rows, cols, lier, playerPosition);
+
+            bool isDead = false;
+            bool isOut = false;
+
+            var action = Console.ReadLine().ToCharArray();
+            for (int i = 0; i < action.Length; i++)
+            {
+                var directions = action[i];
+                var empty = '.';
+                var bunny = 'B';
+                var player = 'P';
+
+                switch (directions)
+                {
+                    case 'U':
+                        if (playerPosition[0] > 0)
+                        {
+                            isDead = MovePlayerUp(lier, playerPosition, isDead, empty, player);
+                        }
+                        else
+                        {
+                            isOut = PlayerOut(lier, playerPosition, empty);
+                        }
+                        isDead = BunniesSpread(rows, cols, lier, player, bunny, isDead);
+                        break;
+
+                    case 'D':
+                        if (playerPosition[0] < rows - 1)
+                        {
+                            isDead = MovePlayerDown(lier, playerPosition, isDead, empty, player);
+                        }
+                        else
+                        {
+                            isOut = PlayerOut(lier, playerPosition, empty);
+                        }
+                        isDead = BunniesSpread(rows, cols, lier, player, bunny, isDead);
+                        break;
+
+                    case 'L':
+                        if (playerPosition[1] > 0)
+                        {
+                            isDead = MovePlayerLeft(lier, playerPosition, isDead, empty, player);
+                        }
+                        else
+                        {
+                            isOut = PlayerOut(lier, playerPosition, empty);
+                        }
+                        isDead = BunniesSpread(rows, cols, lier, player, bunny, isDead);
+                        break;
+
+                    case 'R':
+                        if (playerPosition[1] < cols - 1)
+                        {
+                            isDead = MovePlayerRight(lier, playerPosition, isDead, empty, player);
+                        }
+                        else
+                        {
+                            isOut = PlayerOut(lier, playerPosition, empty);
+                        }
+                        isDead = BunniesSpread(rows, cols, lier, player, bunny, isDead);
+                        break;
+                }
+
+                if (isDead == true || isOut == true)
+                {
+                    break;
+                }
+            }
+
+            PrintEndStatment(rows, lier, playerPosition, isDead, isOut);
+
+        }
+
+        private static bool MovePlayerRight(char[][] lier, int[] playerPosition, bool isDead, char empty, char player)
+        {
+            lier[playerPosition[0]][playerPosition[1]] = empty;
+            playerPosition[1] = playerPosition[1] + 1;
+            if (lier[playerPosition[0]][playerPosition[1]] == empty)
+            {
+                lier[playerPosition[0]][playerPosition[1]] = player;
+            }
+            else
+            {
+                isDead = true;
+            }
+
+            return isDead;
+        }
+
+        private static bool MovePlayerLeft(char[][] lier, int[] playerPosition, bool isDead, char empty, char player)
+        {
+            lier[playerPosition[0]][playerPosition[1]] = empty;
+            playerPosition[1] = playerPosition[1] - 1;
+            if (lier[playerPosition[0]][playerPosition[1]] == empty)
+            {
+                lier[playerPosition[0]][playerPosition[1]] = player;
+            }
+            else
+            {
+                isDead = true;
+            }
+
+            return isDead;
+        }
+
+        private static bool MovePlayerDown(char[][] lier, int[] playerPosition, bool isDead, char empty, char player)
+        {
+            lier[playerPosition[0]][playerPosition[1]] = empty;
+            playerPosition[0] = playerPosition[0] + 1;
+            if (lier[playerPosition[0]][playerPosition[1]] == empty)
+            {
+                lier[playerPosition[0]][playerPosition[1]] = player;
+            }
+            else
+            {
+                isDead = true;
+            }
+
+            return isDead;
+        }
+
+        private static bool PlayerOut(char[][] lier, int[] playerPosition, char empty)
+        {
+            bool isOut = true;
+            lier[playerPosition[0]][playerPosition[1]] = empty;
+            return isOut;
+        }
+
+        private static bool MovePlayerUp(char[][] lier, int[] playerPosition, bool isDead, char empty, char player)
+        {
+            lier[playerPosition[0]][playerPosition[1]] = empty;
+            playerPosition[0] = playerPosition[0] - 1;
+
+            if (lier[playerPosition[0]][playerPosition[1]] == empty)
+            {
+                lier[playerPosition[0]][playerPosition[1]] = player;
+            }
+            else
+            {
+                isDead = true;
+            }
+
+            return isDead;
+        }
+
+        private static void PrintEndStatment(int rows, char[][] lier, int[] playerPosition, bool isDead, bool isOut)
+        {
+            for (int row = 0; row < rows; row++)
+            {
+                Console.WriteLine(lier[row]);
+            }
+            if (isDead == true)
+            {
+                Console.WriteLine($"dead: {string.Join(" ", playerPosition)}");
+            }
+            else if (isOut == true)
+            {
+                Console.WriteLine($"won: {string.Join(" ", playerPosition)}");
+            }
+        }
+
+        private static bool BunniesSpread(int rows, int cols, char[][] lier, char player, char bunny, bool isDead)
+        {
+            var bunniesPositions = new List<int[]>();
+
+
+            for (int currRow = 0; currRow < rows; currRow++)
+            {
+                for (int currCol = 0; currCol < cols; currCol++)
+                {
+                    if(lier[currRow][currCol] == bunny)
+                    {
+                        var coord = new int[2];
+                        coord[0] = currRow;
+                        coord[1] = currCol;
+                        bunniesPositions.Add(coord);
+                    }
+                    
+                }
+            }
+            for (int i = 0; i < bunniesPositions.Count; i++)
+            {
+                int row = bunniesPositions[i][0];
+                int col = bunniesPositions[i][1];
+
+                {
+                    
+                        if (row - 1 >= 0)
+                        {
+                            if (lier[row - 1][col] == player)
+                            {
+                                isDead = true;
+                            }
+                            lier[row - 1][col] = bunny;
+                        }
+                        if (col - 1 >= 0)
+                        {
+                            if (lier[row][col - 1] == player)
+                            {
+                                isDead = true;
+                            }
+                            lier[row][col - 1] = bunny;
+                        }
+                        if (col + 1 < cols)
+                        {
+                            if (lier[row][col + 1] == player)
+                            {
+                                isDead = true;
+                            }
+                            lier[row][col + 1] = bunny;
+                        }
+
+                        if (row + 1 < rows)
+                        {
+                            if (lier[row + 1][col] == player)
+                            {
+                                isDead = true;
+                            }
+                            lier[row + 1][col] = bunny;
+                        }
+                    
+                }
+            }
+
+            return isDead;
+        }
+
+        private static void FillLier(int rows, int cols, char[][] lier, int[] playerPosition)
+        {
+            for (int row = 0; row < rows; row++)
+            {
+                var input = Console.ReadLine().ToCharArray();
+
+
+                if (input.Contains('P'))
+                {
+                    playerPosition[0] = row;
+                    for (int i = 0; i < input.Length; i++)
+                    {
+                        if (input[i] == 'P')
+                        {
+                            playerPosition[1] = i;
+                            break;
+                        }
+                    }
+
+                }
+                for (int col = 0; col < cols; col++)
+                {
+                    lier[row] = new char[cols];
+                    lier[row] = input;
+                }
+            }
+        }
+    }
+}
