@@ -39,13 +39,11 @@ namespace P03.MaxAndMinElement
                             Console.WriteLine(stack.Min());
                         }
                         break;
-
                 }
 
             }
             Console.WriteLine(string.Join(", ",stack));
-            
-
+        
         }
     }
 }
