@@ -37,15 +37,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P06.SongsQueue", "P06.Songs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P07.TruckTour", "P07.TruckTour\P07.TruckTour.csproj", "{B1A800C2-1A7A-4BFB-BF98-7E2751B5B666}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08.BalancedParentheses", "P08.BalancedParentheses\P08.BalancedParentheses.csproj", "{A41C6B92-E8E4-46C5-AB08-5A4ED6AB0A98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P08.BalancedParentheses", "P08.BalancedParentheses\P08.BalancedParentheses.csproj", "{A41C6B92-E8E4-46C5-AB08-5A4ED6AB0A98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P09.SimpleTextEditor", "P09.SimpleTextEditor\P09.SimpleTextEditor.csproj", "{6596FB5F-6AF4-46A8-927C-A42ED995EA68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P09.SimpleTextEditor", "P09.SimpleTextEditor\P09.SimpleTextEditor.csproj", "{6596FB5F-6AF4-46A8-927C-A42ED995EA68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10.Crossroads", "P10.Crossroads\P10.Crossroads.csproj", "{A2A5A6AE-D8F9-4ECC-83E1-88C23EED983A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P10.Crossroads", "P10.Crossroads\P10.Crossroads.csproj", "{A2A5A6AE-D8F9-4ECC-83E1-88C23EED983A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11.KeyRevolver", "P11.KeyRevolver\P11.KeyRevolver.csproj", "{9020FEF9-76A5-4A97-A161-A8D16886DFB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P11.KeyRevolver", "P11.KeyRevolver\P11.KeyRevolver.csproj", "{9020FEF9-76A5-4A97-A161-A8D16886DFB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P12.CupsAndBottles", "P12.CupsAndBottles\P12.CupsAndBottles.csproj", "{AF25DD1C-83D0-43AE-8641-9B204AFC94BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P12.CupsAndBottles", "P12.CupsAndBottles\P12.CupsAndBottles.csproj", "{AF25DD1C-83D0-43AE-8641-9B204AFC94BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTextEditor2", "SimpleTextEditor2\SimpleTextEditor2.csproj", "{6B73E3B7-211E-44A6-9C4B-EB2D3E86BFCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{AF25DD1C-83D0-43AE-8641-9B204AFC94BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF25DD1C-83D0-43AE-8641-9B204AFC94BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF25DD1C-83D0-43AE-8641-9B204AFC94BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B73E3B7-211E-44A6-9C4B-EB2D3E86BFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B73E3B7-211E-44A6-9C4B-EB2D3E86BFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B73E3B7-211E-44A6-9C4B-EB2D3E86BFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B73E3B7-211E-44A6-9C4B-EB2D3E86BFCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
