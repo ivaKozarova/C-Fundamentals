@@ -7,13 +7,12 @@ namespace Guild
 {
     public class Guild
     {
-        private HashSet<Player> roster;
+        private List<Player> roster;
         public Guild(string name, int capacity)
         {
             this.Name = name;
             this.Capacity = capacity;
-            this.roster = new HashSet<Player>();
-
+            this.roster = new List<Player>();
         }
         public string Name { get; set; }
         public int Capacity { get; set; }
@@ -33,17 +32,23 @@ namespace Guild
 
         public bool RemovePlayer(string name)
         {
-            bool isPlayerRemoved = true;
-            var currPlayer = roster.FirstOrDefault(p => p.Name == name);
-            if (currPlayer == null)
+            
+            var currPlayer = roster.FindAll(p => p.Name == name);
+            if (currPlayer.Count == 0)
             {
-                isPlayerRemoved = false;
+                return false;
             }
             else
             {
-                roster.Remove(currPlayer);
+                foreach (var player in currPlayer)
+                {
+                    roster.Remove(player);
+                    
+                }
+
+                return true;
             }
-            return isPlayerRemoved;
+            
         }
 
         public void PromotePlayer(string name)
@@ -56,10 +61,10 @@ namespace Guild
         }
         public void DemotePlayer(string name)
         {
-            var playerToPromote = roster.FirstOrDefault(p => p.Name == name);
-            if (playerToPromote != null && playerToPromote.Rank != "Trail")
+            var playerToDemote = roster.FirstOrDefault(p => p.Name == name);
+            if (playerToDemote != null && playerToDemote.Rank != "Trail")
             {
-                playerToPromote.Rank = "Trail";
+                playerToDemote.Rank = "Trail";
             }
         }
 
