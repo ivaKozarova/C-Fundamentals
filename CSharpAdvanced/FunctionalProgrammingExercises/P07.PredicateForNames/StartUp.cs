@@ -31,9 +31,6 @@ namespace P07.PredicateForNames
                     Console.WriteLine(result);
                 }
             }
-
-
-
         }
     }
 }

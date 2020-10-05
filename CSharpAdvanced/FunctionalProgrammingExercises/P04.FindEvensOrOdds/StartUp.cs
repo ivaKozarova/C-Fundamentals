@@ -9,22 +9,20 @@ namespace P04.FindEvensOrOdds
         static void Main(string[] args)
         {
             var borders = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            string command = Console.ReadLine();
 
-            Predicate<int> predicate = command == "odd" ? 
-                new Predicate<int>((n) => n % 2 != 0) : new Predicate<int>(n => n % 2 == 0);
+            var command = Console.ReadLine();
 
+            Predicate<int> predicate = command == "odd" ?
+                (new Predicate<int>(n => n % 2 != 0)) : (new Predicate<int>(n => n % 2 == 0));
 
-            List<int> numbers = new List<int>();
             for (int i = borders[0]; i <= borders[1]; i++)
             {
-                if(predicate(i))
+                if (predicate(i))
                 {
-                    numbers.Add(i);
+                    Console.Write(i + " ");
                 }
             }
-            Console.WriteLine(string.Join(' ',numbers));
-
+            Console.WriteLine();
         }
     }
 }
