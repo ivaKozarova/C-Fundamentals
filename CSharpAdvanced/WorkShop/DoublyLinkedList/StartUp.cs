@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
+
 
 namespace DoublyLinkedList
 {
@@ -25,10 +25,16 @@ namespace DoublyLinkedList
 
             node.ForEach(x => Console.WriteLine(x.Name));
 
-            foreach (var cat in array)
+            Console.WriteLine("Cats names: ");
+            foreach (var cat in node)
             {
-                Console.WriteLine(cat);
+                Console.WriteLine(cat.Name);
             }
+            Console.WriteLine(new string('-',20));
+            //foreach (var cat in array)
+            //{
+            //    Console.WriteLine(cat);
+            //}
            
           //  Console.WriteLine(string.Join(", ",node.ToArray()));
 

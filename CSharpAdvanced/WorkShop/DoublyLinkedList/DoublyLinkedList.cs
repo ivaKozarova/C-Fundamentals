@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Text;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DoublyLinkedList
 {
-    public class DoublyLinkedList<T>
+    public class DoublyLinkedList<T> : IEnumerable<T>
 
     {
         private NodeInfo<T> head;
@@ -111,6 +112,20 @@ namespace DoublyLinkedList
                 currNode = currNode.NextNode;
             }
             return arr;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            var currNode = this.head;
+            while (currNode != null)
+            {
+                yield return currNode.Value;
+                currNode = currNode.NextNode;
+            }
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
         }
     }
 }
