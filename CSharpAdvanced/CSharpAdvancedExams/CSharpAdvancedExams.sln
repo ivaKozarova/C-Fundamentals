@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake", "Snake\Snake.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exam26October2019", "Exam26October2019", "{61473B52-0A7A-4B24-8D8C-927F90844EDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatingApp", "DatingApp\DatingApp.csproj", "{77E7C637-0846-43D1-BDFF-6116F56F9EDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatingApp", "DatingApp\DatingApp.csproj", "{77E7C637-0846-43D1-BDFF-6116F56F9EDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWorm", "BookWorm\BookWorm.csproj", "{6703B016-35D4-4DEC-9BC8-D6BE4B703362}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SantasPresentFactory", "SantasPresentFactory\SantasPresentFactory.csproj", "{D4A254DD-534D-4E0A-B388-10D59689287B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentDelivery", "PresentDelivery\PresentDelivery.csproj", "{888DD23A-7985-420F-8928-4964700D69E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +41,18 @@ Global
 		{77E7C637-0846-43D1-BDFF-6116F56F9EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77E7C637-0846-43D1-BDFF-6116F56F9EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77E7C637-0846-43D1-BDFF-6116F56F9EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6703B016-35D4-4DEC-9BC8-D6BE4B703362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6703B016-35D4-4DEC-9BC8-D6BE4B703362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6703B016-35D4-4DEC-9BC8-D6BE4B703362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6703B016-35D4-4DEC-9BC8-D6BE4B703362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A254DD-534D-4E0A-B388-10D59689287B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A254DD-534D-4E0A-B388-10D59689287B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A254DD-534D-4E0A-B388-10D59689287B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A254DD-534D-4E0A-B388-10D59689287B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888DD23A-7985-420F-8928-4964700D69E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888DD23A-7985-420F-8928-4964700D69E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888DD23A-7985-420F-8928-4964700D69E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888DD23A-7985-420F-8928-4964700D69E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
