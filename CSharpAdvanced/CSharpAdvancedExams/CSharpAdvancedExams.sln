@@ -13,11 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exam26October2019", "Exam26
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatingApp", "DatingApp\DatingApp.csproj", "{77E7C637-0846-43D1-BDFF-6116F56F9EDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWorm", "BookWorm\BookWorm.csproj", "{6703B016-35D4-4DEC-9BC8-D6BE4B703362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookWorm", "BookWorm\BookWorm.csproj", "{6703B016-35D4-4DEC-9BC8-D6BE4B703362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SantasPresentFactory", "SantasPresentFactory\SantasPresentFactory.csproj", "{D4A254DD-534D-4E0A-B388-10D59689287B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SantasPresentFactory", "SantasPresentFactory\SantasPresentFactory.csproj", "{D4A254DD-534D-4E0A-B388-10D59689287B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentDelivery", "PresentDelivery\PresentDelivery.csproj", "{888DD23A-7985-420F-8928-4964700D69E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PresentDelivery", "PresentDelivery\PresentDelivery.csproj", "{888DD23A-7985-420F-8928-4964700D69E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14Oct2018", "14Oct2018", "{05AC119A-83D9-4C0F-AB4D-FBF32475CA05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTrasfer", "DataTrasfer\DataTrasfer.csproj", "{D7484F79-FDF8-4196-9640-6D97F1D9E252}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miner", "Miner\Miner.csproj", "{305785DC-2F1E-4059-B28D-AFFC94C146E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,12 +59,22 @@ Global
 		{888DD23A-7985-420F-8928-4964700D69E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{888DD23A-7985-420F-8928-4964700D69E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{888DD23A-7985-420F-8928-4964700D69E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7484F79-FDF8-4196-9640-6D97F1D9E252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7484F79-FDF8-4196-9640-6D97F1D9E252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7484F79-FDF8-4196-9640-6D97F1D9E252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7484F79-FDF8-4196-9640-6D97F1D9E252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{305785DC-2F1E-4059-B28D-AFFC94C146E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305785DC-2F1E-4059-B28D-AFFC94C146E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305785DC-2F1E-4059-B28D-AFFC94C146E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305785DC-2F1E-4059-B28D-AFFC94C146E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{77E7C637-0846-43D1-BDFF-6116F56F9EDE} = {61473B52-0A7A-4B24-8D8C-927F90844EDA}
+		{D7484F79-FDF8-4196-9640-6D97F1D9E252} = {05AC119A-83D9-4C0F-AB4D-FBF32475CA05}
+		{305785DC-2F1E-4059-B28D-AFFC94C146E4} = {05AC119A-83D9-4C0F-AB4D-FBF32475CA05}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9383827-DE99-490D-B722-87974EB98134}
