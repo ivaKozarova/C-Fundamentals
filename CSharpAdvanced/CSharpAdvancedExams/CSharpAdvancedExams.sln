@@ -33,9 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitClass", "ReVoltExamFe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixExample", "MatrixExample\MatrixExample.csproj", "{2F50C1D4-B557-40F6-897A-F2FC720AC33E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SneakingExamFeb2018", "SneakingExamFeb2018\SneakingExamFeb2018.csproj", "{5F034320-19E8-40DB-8D7C-7B9B41113436}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SneakingExamFeb2018", "SneakingExamFeb2018\SneakingExamFeb2018.csproj", "{5F034320-19E8-40DB-8D7C-7B9B41113436}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyRevolverExamFeb2018", "KeyRevolverExamFeb2018\KeyRevolverExamFeb2018.csproj", "{A521B6CB-D951-471D-AEA8-8DAF355437B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeyRevolverExamFeb2018", "KeyRevolverExamFeb2018\KeyRevolverExamFeb2018.csproj", "{A521B6CB-D951-471D-AEA8-8DAF355437B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HitListExamFeb2018", "HitListExamFeb2018\HitListExamFeb2018.csproj", "{9EFD008D-8A6E-4B66-B8B5-09DA39D388A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +105,10 @@ Global
 		{A521B6CB-D951-471D-AEA8-8DAF355437B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A521B6CB-D951-471D-AEA8-8DAF355437B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A521B6CB-D951-471D-AEA8-8DAF355437B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFD008D-8A6E-4B66-B8B5-09DA39D388A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFD008D-8A6E-4B66-B8B5-09DA39D388A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFD008D-8A6E-4B66-B8B5-09DA39D388A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFD008D-8A6E-4B66-B8B5-09DA39D388A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
